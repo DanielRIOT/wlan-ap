@@ -150,6 +150,15 @@ define Device/plasmacloud_pax1800-v2
 endef
 TARGET_DEVICES += plasmacloud_pax1800-v2
 
+define Device/compex_wpq618
+  DEVICE_TITLE := WPQ618
+  DEVICE_DTS := qcom-ipq6018-compex-wpq618
+  SUPPORTED_DEVICES := compex,wpq618
+  DEVICE_DTS_CONFIG := config@cp01-c1
+  DEVICE_PACKAGES := ath11k-wifi-meshpp-s618 -kmod-usb-dwc3-of-simple kmod-usb-dwc3-qcom kmod-usb3
+endef
+TARGET_DEVICES += compex_wpq618
+
 define Device/meshpp_s618_cp03
   DEVICE_TITLE := S618 cp03
   DEVICE_DTS := qcom-ipq6018-meshpp-s618-cp03

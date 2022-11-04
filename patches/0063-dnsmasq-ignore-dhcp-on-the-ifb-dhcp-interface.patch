@@ -1,0 +1,25 @@
+From 51bfc7836667a660eb76fd186103752713209db6 Mon Sep 17 00:00:00 2001
+From: John Crispin <john@phrozen.org>
+Date: Mon, 13 Jun 2022 13:33:31 +0200
+Subject: [PATCH 063/149] dnsmasq: ignore dhcp on the ifb-dhcp interface
+
+Signed-off-by: John Crispin <john@phrozen.org>
+---
+ package/network/services/dnsmasq/files/dnsmasq.init | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/package/network/services/dnsmasq/files/dnsmasq.init b/package/network/services/dnsmasq/files/dnsmasq.init
+index 205bfb4cf6..ec9f57505d 100644
+--- a/package/network/services/dnsmasq/files/dnsmasq.init
++++ b/package/network/services/dnsmasq/files/dnsmasq.init
+@@ -1106,6 +1106,7 @@ dnsmasq_start()
+ 		[ -n "$BOOT" ] || config_foreach filter_dnsmasq dhcp dhcp_add "$cfg"
+ 	fi
+ 
++	xappend "except-interface=ifb-dhcp"
+ 
+ 	echo >> $CONFIGFILE_TMP
+ 	config_foreach filter_dnsmasq cname dhcp_cname_add "$cfg"
+-- 
+2.34.1
+

@@ -1,0 +1,83 @@
+---
+description: Add the RIOT CROWDnet dependencies
+feeds:
+  - name: luci
+    uri: https://github.com/openwrt/luci.git
+    revision: 69231a7d62a3b809fc5972071e691fb02730a10e
+packages:
+  - luci-theme-bootstrap
+  - cgi-io
+  - luci-ssl
+  - luci-compat
+  - liblucihttp
+  - lua
+  - luci-base
+  - rpcd
+  - rpcd-mod-file
+  - rpcd-mod-iwinfo
+  - rpcd-mod-luci
+  - rpcd-mod-rrdns
+  - uhttpd
+  - uhttpd-mod-ubus
+  - atfpolicy
+  - kmod-batman-adv
+  - batctl-full
+  - kmod-block2mtd
+  - bind-dig
+  - cJSON
+  - curl
+  - dnsmasq-full
+  - dynamic-vlan
+  - firstcontact
+  - gre
+  - ieee8021x
+  - igmpproxy
+  - ip-bridge
+  - kmod-sched-bpf
+  - lldpd
+  - maverick
+  - uspot
+  - spotfilter
+  - radius-gw-proxy
+  - radsecproxy
+  - ratelimit
+  - rtty-openssl
+  - tcpdump
+  - tip-defaults
+  - ucode
+  - unetd
+  - udhcpsnoop
+  - udnssnoop
+  - usteer
+  - ustp
+  - libustream-openssl
+  - udevmand
+  - umdns
+  - oping
+  - vxlan
+  - wpad-openssl
+  - nano
+diffconfig: |
+  CONFIG_OPENSSL_ENGINE=y
+  CONFIG_OPENSSL_PREFER_CHACHA_OVER_GCM=y
+  CONFIG_OPENSSL_WITH_ASM=y
+  CONFIG_OPENSSL_WITH_CHACHA_POLY1305=y
+  CONFIG_OPENSSL_WITH_CMS=y
+  CONFIG_OPENSSL_WITH_DEPRECATED=y
+  CONFIG_OPENSSL_WITH_ERROR_MESSAGES=y
+  CONFIG_OPENSSL_WITH_PSK=y
+  CONFIG_OPENSSL_WITH_SRP=y
+  CONFIG_OPENSSL_WITH_TLS13=y
+  # CONFIG_PACKAGE_wpad is not set
+  # CONFIG_PACKAGE_wpad-basic-wolfssl is not set
+  # CONFIG_PACKAGE_dnsmasq is not set 
+  CONFIG_IMAGEOPT=y
+  CONFIG_PREINITOPT=y
+  CONFIG_TARGET_PREINIT_SUPPRESS_STDERR=y
+  CONFIG_TARGET_PREINIT_DISABLE_FAILSAFE=y
+  # CONFIG_BATMAN_ADV_BATMAN_V is not set
+  # CONFIG_OPENVSWITCH_WITH_LIBUNBOUND is not set
+  # CONFIG_PACKAGE_libustream-wolfssl is not set
+  # CONFIG_LIBCURL_WOLFSSL is not set
+  CONFIG_LIBCURL_OPENSSL=y
+  # CONFIG_PACKAGE_libwolfssl is not set

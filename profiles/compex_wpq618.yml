@@ -1,0 +1,27 @@
+profile: compex_wpq618
+target: ipq807x
+subtarget: ipq60xx
+description: Build image for Compex WPQ618 Boards
+image: bin/targets/ipq807x/ipq60xx/openwrt-ipq807x-compex_wpq618-squashfs-sysupgrade.tar
+feeds:
+  - name: ipq807x
+    path: ../../feeds/ipq807x
+  - name: bluetooth
+    path: ../../feeds/bluetooth
+  - name: bluetooth_csr
+    path: ../../feeds/bluetooth-csr
+include:
+  - wifi-ax
+  - wwan
+  - riot-crowdnet
+packages:
+  - i2c-tools
+  - kmod-i2c-algo-bit
+  - kmod-i2c-core
+  - libi2c
+  - iperf3
+diffconfig: |
+  CONFIG_KERNEL_IPQ_MEM_PROFILE=0
+  CONFIG_BUSYBOX_CUSTOM=y
+  CONFIG_BUSYBOX_CONFIG_FEATURE_REVERSE_SEARCH=y
+  CONFIG_BUSYBOX_CONFIG_WATCH=y
