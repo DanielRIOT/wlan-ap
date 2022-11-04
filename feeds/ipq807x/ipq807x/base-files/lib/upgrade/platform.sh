@@ -136,7 +136,7 @@ platform_do_upgrade() {
 	yuncore,ax840|\
 	tplink,ex447|\
 	tplink,ex227|\
-	compex,wpq865|\
+	compex,wpq618|\
 	meshpp,s618-cp03|\
 	meshpp,s618-cp01)
 		nand_upgrade_tar "$1"
