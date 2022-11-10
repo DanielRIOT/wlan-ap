@@ -18,6 +18,8 @@ packages:
   - i2c-tools
   - kmod-i2c-algo-bit
   - kmod-i2c-core
+  - kmod-bluetooth
+  - csr8811
   - libi2c
   - iperf3
 diffconfig: |

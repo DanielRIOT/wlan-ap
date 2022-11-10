@@ -7,7 +7,6 @@ feeds:
 packages:
   - luci-theme-bootstrap
   - cgi-io
-  - luci-ssl
   - luci-compat
   - liblucihttp
   - lua
