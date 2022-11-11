@@ -12,18 +12,15 @@ feeds:
     path: ../../feeds/bluetooth-csr
 include:
   - wifi-ax
+# - wifi-ath10k
   - wwan
   - riot-crowdnet
 packages:
-  - i2c-tools
-  - kmod-i2c-algo-bit
-  - kmod-i2c-core
   - kmod-bluetooth
   - csr8811
-  - libi2c
   - iperf3
-diffconfig: |
-  CONFIG_KERNEL_IPQ_MEM_PROFILE=0
-  CONFIG_BUSYBOX_CUSTOM=y
-  CONFIG_BUSYBOX_CONFIG_FEATURE_REVERSE_SEARCH=y
-  CONFIG_BUSYBOX_CONFIG_WATCH=y
+#diffconfig: |
+#  CONFIG_KERNEL_IPQ_MEM_PROFILE=0
+#  CONFIG_BUSYBOX_CUSTOM=y
+#  CONFIG_BUSYBOX_CONFIG_FEATURE_REVERSE_SEARCH=y
+#  CONFIG_BUSYBOX_CONFIG_WATCH=y

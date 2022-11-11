@@ -1,16 +1,17 @@
 ---
 description: Add the RIOT CROWDnet dependencies
 feeds:
-  - name: luci
+  - name: luci_21_02
     uri: https://github.com/openwrt/luci.git
-    revision: 69231a7d62a3b809fc5972071e691fb02730a10e
+    revision: 04257f6704c1b8707ee7a58ca4ec0f18a2133611
+
 packages:
-  - luci-theme-bootstrap
   - cgi-io
-  - luci-compat
   - liblucihttp
   - lua
   - luci-base
+  - luci-mod-ucentral
+  - luci-theme-ucentral
   - rpcd
   - rpcd-mod-file
   - rpcd-mod-iwinfo
@@ -18,6 +19,8 @@ packages:
   - rpcd-mod-rrdns
   - uhttpd
   - uhttpd-mod-ubus
+  - luci-theme-bootstrap
+  - luci
   - atfpolicy
   - kmod-batman-adv
   - batctl-full
