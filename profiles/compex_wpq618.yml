@@ -17,6 +17,13 @@ include:
   - riot-crowdnet
 packages:
   - kmod-bluetooth
+  - kmod-usb-acm
+  - kmod-usb-serial
+  - kmod-usb-serial-qualcomm
+  - bluez-utils
+  - gpsd-clients
+  - gpsd
+  - pciutils
   - ath11k-wifi-qcom-ipq6018
   - csr8811
   - iperf3

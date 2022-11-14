@@ -1,9 +1,11 @@
 ---
 description: Add the RIOT CROWDnet dependencies
 feeds:
-  - name: luci_21_02
-    uri: https://github.com/openwrt/luci.git
-    revision: 04257f6704c1b8707ee7a58ca4ec0f18a2133611
+  - name: luci_feed
+    uri: https://git.openwrt.org/project/luci.git
+    tag: openwrt-21.02
+   #  uri: https://git.openwrt.org/project/luci.git
+   # revision: 782c7b6c1d06540bd5e63f7663d7f29ef309c771
 
 packages:
   - cgi-io
