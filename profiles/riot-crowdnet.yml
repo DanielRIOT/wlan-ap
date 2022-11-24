@@ -1,28 +1,16 @@
 ---
 description: Add the RIOT CROWDnet dependencies
-feeds:
-  - name: luci_feed
-    uri: https://git.openwrt.org/project/luci.git
-    tag: openwrt-21.02
+#feeds:
+ # - name: luci_feed
+  #  uri: https://git.openwrt.org/project/luci.git
+  #  tag: openwrt-21.02
    #  uri: https://git.openwrt.org/project/luci.git
    # revision: 782c7b6c1d06540bd5e63f7663d7f29ef309c771
-
+include:
+  - webui
 packages:
-  - cgi-io
-  - liblucihttp
-  - lua
-  - luci-base
-  - luci-mod-ucentral
-  - luci-theme-ucentral
-  - rpcd
-  - rpcd-mod-file
-  - rpcd-mod-iwinfo
-  - rpcd-mod-luci
-  - rpcd-mod-rrdns
-  - uhttpd
-  - uhttpd-mod-ubus
   - luci-theme-bootstrap
-  - luci
+  - luci-app-mwan3
   - atfpolicy
   - kmod-batman-adv
   - batctl-full
@@ -62,6 +50,8 @@ packages:
   - wpad-openssl
   - nano
 diffconfig: |
+  CONFIG_BATMAN_ADV_BATMAN_V=y
+  CONFIG_BATMAN_ADV_NC=y
   CONFIG_OPENSSL_ENGINE=y
   CONFIG_OPENSSL_PREFER_CHACHA_OVER_GCM=y
   CONFIG_OPENSSL_WITH_ASM=y
@@ -79,7 +69,6 @@ diffconfig: |
   CONFIG_PREINITOPT=y
   CONFIG_TARGET_PREINIT_SUPPRESS_STDERR=y
   CONFIG_TARGET_PREINIT_DISABLE_FAILSAFE=y
-  # CONFIG_BATMAN_ADV_BATMAN_V is not set
   # CONFIG_OPENVSWITCH_WITH_LIBUNBOUND is not set
   # CONFIG_PACKAGE_libustream-wolfssl is not set
   # CONFIG_LIBCURL_WOLFSSL is not set

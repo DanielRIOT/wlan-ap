@@ -25,6 +25,12 @@
 	model = "Compex, WPQ618";
 	compatible = "compex,wpq618", "qcom,ipq6018-cp01", "qcom,ipq6018";
 
+	chosen {
+			bootargs = "console=ttyMSM0,115200,n8 rw init=/init";
+		        bootargs-append = " console=ttyMSM0,115200n8 panic=10 ubi.mtd=nand root=mtd:ubi_rootfs rootfstype=squashfs swiotlb=1 coherent_pool=2M rootwait";
+		      // bootargs-append = " console=ttyMSM0,115200n8 panic=10 ubi.mtd=rootfs root=mtd:ubi_rootfs rootfstype=squashfs rootwait swiotlb=1 coherent_pool=2M rootwait";
+	};
+
 	/*
 	 * +=========+==============+========================+
 	 * |        |              |                         |

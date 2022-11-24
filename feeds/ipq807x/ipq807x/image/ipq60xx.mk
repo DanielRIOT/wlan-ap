@@ -155,7 +155,7 @@ define Device/compex_wpq618
   DEVICE_DTS := qcom-ipq6018-compex-wpq618
   SUPPORTED_DEVICES := compex,wpq618
   DEVICE_DTS_CONFIG := config@cp01-c1
-  DEVICE_PACKAGES := ath11k-wifi-meshpp-s618 -kmod-usb-dwc3-of-simple kmod-usb-dwc3-qcom kmod-usb3
+  DEVICE_PACKAGES := ath11k-wifi-qcom-ipq6018 -kmod-usb-dwc3-of-simple kmod-usb-dwc3-qcom kmod-usb3
 endef
 TARGET_DEVICES += compex_wpq618
 

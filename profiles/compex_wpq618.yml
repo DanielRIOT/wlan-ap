@@ -17,18 +17,25 @@ include:
   - riot-crowdnet
 packages:
   - kmod-bluetooth
+  - kmod-usb-ohci
   - kmod-usb-acm
   - kmod-usb-serial
   - kmod-usb-serial-qualcomm
+  - kmod-ath10k-ct
+  - ath10k-firmware-qca988x-ct-full-htt
+  - ath10k-firmware-qca9984-ct-htt
+  - bluez-libs
   - bluez-utils
+  - bluez-tools
   - gpsd-clients
   - gpsd
   - pciutils
-  - ath11k-wifi-qcom-ipq6018
-  - csr8811
+#  - csr8811
   - iperf3
 diffconfig: |
   CONFIG_KERNEL_IPQ_MEM_PROFILE=0
   CONFIG_BUSYBOX_CUSTOM=y
   CONFIG_BUSYBOX_CONFIG_FEATURE_REVERSE_SEARCH=y
   CONFIG_BUSYBOX_CONFIG_WATCH=y
+  CONFIG_BUSYBOX_CONFIG_LSUSB=y
+  # CONFIG_ATH10K-CT_LEDS is not set

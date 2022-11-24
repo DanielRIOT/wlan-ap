@@ -73,6 +73,7 @@ platform_check_image() {
 	cig,wf194c|\
 	cig,wf194c4|\
 	cig,wf196|\
+	compex,wpq618|\
 	cybertan,eww622-a1|\
 	glinet,ax1800|\
 	glinet,axt1800|\
